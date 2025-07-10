@@ -6,14 +6,14 @@
 a = 10
 b = 2
 
-sum_result = a+b
-result2 = a-b
-result3 = a*b
-result4 = a/b
-print ("Сумма:", sum_result)
-print ("Разность:", result2)
-print ("Произведение:", result3)
-print ("Частное:", result4)
+addition = a+b
+subtraction = a-b
+multiplication = a*b
+dividing = a/b
+print ("Сумма:", addition)
+print ("Разность:", subtraction)
+print ("Произведение:", multiplication)
+print ("Частное:", dividing)
 
 # Задача 2 (Типы данных)
 # Напиши код, который создаёт переменные:
