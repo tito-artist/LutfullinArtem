@@ -471,3 +471,147 @@ y = 3
 x = 10
 y = 3
 print(f"Результат: 10 / 3 = {x / y:.3f}")
+
+#Задача 1.
+#Дана строка: s = "Hello, World!".
+#Выведи подстроку, содержащую только слово "World", используя срезы.
+
+s = "Hello, World!"
+print(s[7:12])
+
+#Задача 2.
+#Даны две переменные:
+#name = "Анна"
+#age = 25
+#С помощью f-строки выведи строку в формате:
+#"Меня зовут Анна, мне 25 лет."
+
+name = "Анна"
+age = 25
+
+print(f"Меня зовут {name}, мне {age} лет.")
+
+#Задача 3.
+#Дана строка:
+#text = "  python is awesome!  "
+#Примени методы строк, чтобы:
+#Удалить пробелы в начале и конце строки
+#Сделать все буквы заглавными
+
+text = "  python is awesome!  "
+
+print(text.strip().upper())
+
+#Задача 4.
+#Даны три переменные:
+#word1 = "Привет"
+#word2 = ", "
+#word3 = "мир!"
+#Собери из них одну строку двумя разными способами (без f-строк) и выведи результат.
+
+word1 = "Привет"
+word2 = ", "
+word3 = "мир!"
+
+print(word1 + word2 + word3)
+
+# Задача 1 (Создание строки)
+# Напиши код, который создаёт строку "Hello" и строку 'World' (одинарные и двойные кавычки),
+# затем выведи их в одну строку через пробел.
+# Что проверить:
+# Верно ли использованы кавычки
+# Верно ли выполнена конкатенация
+
+word1 = "Hello"
+word2 = "World"
+
+result = word1 + " " + word2
+print(result)
+
+# Задача 2 (Доступ к символам)
+# Дана строка "Automation". Выведи её первый и последний символы.
+
+
+meaning = "Automation"
+print(meaning[0])
+print(meaning[-1])
+
+# Задача 3 (Срезы)
+# Дана строка "Programming". Выведи срез с 3-го по 7-й символ (включительно).
+
+meaning = "Programming"
+print(meaning[2:7])
+
+# Задача 4 (Длина строки)
+# Напиши программу, которая принимает строку от пользователя через input() и выводит её длину.
+
+result = input("Введите текст: ")
+print(len(result))
+
+# Задача 5 (Конкатенация)
+# Даны две переменные:
+# word1 = "Auto"
+# word2 = "mation"
+# Соедини их и выведи результат ("Automation").
+
+word1 = "Auto"
+word2 = "mation"
+
+result = word1 + word2
+print(result)
+
+# Задача 6 (F-строки)
+# Даны переменные:
+# name = "Alice"
+# age = 25
+# Создай строку "Alice is 25 years old", используя f-строку.
+
+name = "Alice"
+age = 25
+
+result = f"{name} is {age} years old"
+print(result)
+
+# Задача 7 (Методы строк)
+# Дана строка " hello ". Удали пробелы в начале и конце строки методом strip().
+
+word = " hello "
+print(word.strip())
+
+# Задача 8 (Комбинированная)
+# Дана строка: "Data Science".
+# Переведи её в верхний регистр
+# Замени пробел на дефис
+# Выведи результат и длину новой строки
+# Формат вывода:
+# "DATA-SCIENCE", 11
+
+word = "Data Science"
+new_word = word.replace(" ", "-").upper()
+
+print(f"{new_word}, {len(new_word)}")
+
+# Задача 9 (Индексы + Срезы)
+# Напиши функцию get_middle_chars(text), которая:
+# Принимает строку text
+# Возвращает 3 средних символа
+# Если длина строки чётная, возвращает 2 символа
+
+def get_middle_chars(text):
+
+    if len(text) % 2 == 0:
+        middle = len(text) // 2
+        start = middle - 1
+        end = middle + 1
+        return text[start:end]
+
+    else:
+        middle = len(text) // 2
+        start = middle - 1
+        end = middle + 2
+        return text[start:end]
+
+print(get_middle_chars("Python"))   # "th" (чётная)
+print(get_middle_chars("Hello"))    # "ell" (нечётная)
+print(get_middle_chars("Hi"))       # "Hi" (чётная)
+print(get_middle_chars("A"))        # "A" (граничный случай)
