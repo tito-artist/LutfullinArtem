@@ -496,7 +496,7 @@ with open("notes.txt", "r") as file:
 with open("tasks.txt", "w") as file:
     file.write("Закончить проект\nСделать зарядку\nПолить цветы\n")
 
-# 2.
+# 2. Нумеруем и выводим строки
 with open("tasks.txt", "r") as file:
     print("Задачи дня:")
     for i, line in enumerate(file, start=1):

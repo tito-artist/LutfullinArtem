@@ -501,3 +501,87 @@ sensor = TemperatureSensor()
 sensor.set_temperature(25)
 print(sensor.get_temperature())  # 25
 sensor.set_temperature(-300)
+
+# Задача 1 (Создание класса)
+# Создай класс Book, который не содержит никаких атрибутов или методов (просто пустой класс с pass).
+# Напиши код и проверь, что класс создается без ошибок.
+
+class Book:
+    pass
+
+# Задача 2 (Конструктор класса __init__)
+# Создай класс Student. В конструкторе (__init__) задай два атрибута:
+# name (имя студента, строка),
+# age (возраст студента, число).
+# Проверь, что объект создаётся с этими атрибутами.
+
+class Student:
+
+    def __init__(self, name, age):
+        self.name = str(name)
+        self.age = int(age)
+
+student = Student("Анна", 20)
+print(student.name, student.age)
+
+# Задача 3 (Методы класса)
+# Создай класс Calculator с одним методом add, который принимает два числа и возвращает их сумму.
+# Требования:
+# Метод add должен быть объявлен внутри класса.
+# Используй параметр self (даже если он не используется).
+
+class Calculator:
+
+    def add(self, a, b):
+        return a + b
+
+calc = Calculator()
+result = calc.add(5, 3)
+print(result)
+
+# Задача 3.1 (Усложнённый калькулятор)
+# Доработай класс Calculator, чтобы он:
+# Имел 4 метода:
+# add(a, b) — сложение,
+# subtract(a, b) — вычитание (a - b),
+# multiply(a, b) — умножение,
+# divide(a, b) — деление (a / b).
+# Проверял деление на ноль:
+# Если b == 0 в методе divide, вызывай ошибку ZeroDivisionError с понятным сообщением.
+# Хранил историю операций:
+# Добавь атрибут history (список), куда записываются строки вида:
+# "5 + 3 = 8", "10 / 2 = 5" и т.д. после каждого вызова метода.
+
+class Calculator:
+
+    def __init__(self):
+        self.history = []
+
+    def add(self, a, b):
+        result = a + b
+        self.history.append(f"{a} + {b} = {result}")
+        return result
+
+    def subtract(self, a, b):
+        result = a - b
+        self.history.append(f"{a} - {b} = {result}")
+        return result
+
+    def multiply(self, a, b):
+        result = a * b
+        self.history.append(f"{a} * {b} = {result}")
+        return result
+
+    def divide(self, a, b):
+        if b == 0:
+            raise ZeroDivisionError("Нельзя делить на ноль!")
+        else:
+            result = a / b
+            self.history.append(f"{a} / {b} = {result}")
+            return result
+
+calc = Calculator()
+print(calc.add(2, 3))
+print(calc.divide(6, 2))
+print(calc.divide(5, 0))
+print(calc.history)
