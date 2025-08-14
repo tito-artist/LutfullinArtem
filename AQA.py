@@ -6,10 +6,11 @@
 a = 10
 b = 2
 
-addition = a+b
-subtraction = a-b
-multiplication = a*b
-dividing = a/b
+addition = a + b
+subtraction = a - b
+multiplication = a * b
+dividing = a / b
+
 print ("Сумма:", addition)
 print ("Разность:", subtraction)
 print ("Произведение:", multiplication)
@@ -28,6 +29,7 @@ print ("Частное:", dividing)
 num = 5
 text = "Python"
 is_active = True
+
 print("Тип num:", type(num))
 print("Тип text:", type(text))
 print("Тип is_active:", type(is_active))
@@ -73,8 +75,8 @@ print ("x <= y:", x <= y)
 
 #Задача 5 (Преобразование типов)
 #Даны переменные:
-num_str = "10"
-num_float = 5.7
+# num_str = "10"
+# num_float = 5.7
 #Преобразуй num_str в целое число, а num_float — в строку,
 # затем выведи их новые типы в том же формате, что и в задаче 2.
 
@@ -92,13 +94,14 @@ print("Тип num_float после преобразования:", type(num_stri
 
 #Задача 4 (Операции сравнения)
 #Даны переменные:
-x = 7
-y = 10
+# x = 7
+# y = 10
 #Выведи результаты сравнения (>, <, ==, !=) в формате:
 #"x > y: <результат>", "x == y: <результат>" и т.д.
 
 x = 7
 y = 10
+
 print("x > y:", x > y)
 print("x < y:", x < y)
 print("x == y:", x == y)
@@ -143,6 +146,7 @@ num_float = 3.14
 num_str = "Hello"
 num_bool = True
 num_list = [1, 2, 3]
+
 print("Тип 3.14:", type(num_float))
 print("Тип Hello:", type(num_str))
 print("Тип True:", type(num_bool))
@@ -159,13 +163,15 @@ print("Тип [1, 2, 3]:", type(num_list))
 
 height = "189"
 age = 39
+
 result = int(height) + age
+
 print(f"Результат: {result}, тип: {type(result)}")
 
 #Задача 9 (Арифметические операции + преобразование типов)
 #Дано:
-price = "15.5"  # строка
-tax = 2          # целое число
+# price = "15.5"  # строка
+# tax = 2          # целое число
 #Вычисли итоговую стоимость (price + tax) и выведи результат с типом в формате:
 #"Итог: <значение>, тип: <тип>".
 
@@ -179,21 +185,21 @@ print(f"Итог: {sum_price_tax}, тип: {type(sum_price_tax)}")
 
 #Задача 10 (Сравнение строк и чисел)
 #Дано:
-
-num_str = "100"
-num_int = 100
+#
+# num_str = "100"
+# num_int = 100
 #Сравни их через == и выведи результат в формате:
 #"Строка и число равны? <ответ>".
 
 num_str = "100"
 num_int = 100
 comparison =  num_str == num_int
+
 print(f"Строка и число равны? {comparison}")
 
 #Задача 11 (Список и типы)
 #Дано:
-
-my_list = [10, "текст", 3.14, False]
+# my_list = [10, "текст", 3.14, False]
 #Выведи тип каждого элемента в формате:
 #"Элемент <значение>: <тип>"
 
