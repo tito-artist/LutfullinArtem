@@ -46,6 +46,7 @@ class Student:
     def introduce(self):
         print(f"Меня зовут {self.name}, мне {self.age} лет, я учусь в {self.school}.")
 
+
 student = Student("Totti", 19)
 student.introduce()
 
@@ -190,6 +191,7 @@ class Calculator:
     def get_memory(self):
         return self.memory
 
+
 calculator = Calculator()
 calculator.add(4, 8)
 print(calculator.get_memory())
@@ -209,6 +211,7 @@ class Animal:
 
     def speak(self):
         return f"Я не знаю, какой звук издаю!"
+
 
 animal = Animal("Мурзилка")
 animal.speak()
@@ -237,6 +240,7 @@ class Dog(Animal):
 
     def fetch(self, item):
         return f"Принёс {item}!"
+
 
 dog = Dog("Бобик")
 print(dog.name)
@@ -267,6 +271,7 @@ class BankAccount:
 
     def get_balance(self):
         return self.__balance
+
 
 bank = BankAccount()
 bank.deposit(350)
@@ -310,6 +315,7 @@ class Bird(Animal):
 
     def speak(self):
         return f"Чирик!"
+
 
 cat = Cat("Мурка")
 print(cat.name)
@@ -369,6 +375,7 @@ class Book:
 
     def get_title(self):
         return self.title.upper()
+
 
 my_book = Book("Мастер и Маргарита")
 print(my_book.get_title())
@@ -469,13 +476,11 @@ class BankAccount:
         return f"Ваш баланс {self.balance} рублей"
 
 
-
 acc = BankAccount("Мария", 1000)
 acc.deposit(500)
 # Начислены проценты: 10.00₽ (1% от 1000)
 # Баланс станет: 1000 + 10 + 500 = 1510₽
 print(acc.display_balance())
-
 
 #Задача 7 (Приватные атрибуты)
 #Создай класс TemperatureSensor:
@@ -496,6 +501,7 @@ class TemperatureSensor:
             print(f"Некорректное значение!")
         else:
             self.__temperature = value
+
 
 sensor = TemperatureSensor()
 sensor.set_temperature(25)
@@ -521,6 +527,7 @@ class Student:
         self.name = str(name)
         self.age = int(age)
 
+
 student = Student("Анна", 20)
 print(student.name, student.age)
 
@@ -534,6 +541,7 @@ class Calculator:
 
     def add(self, a, b):
         return a + b
+
 
 calc = Calculator()
 result = calc.add(5, 3)
@@ -579,6 +587,7 @@ class Calculator:
             result = a / b
             self.history.append(f"{a} / {b} = {result}")
             return result
+
 
 calc = Calculator()
 print(calc.add(2, 3))
